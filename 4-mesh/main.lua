@@ -2,7 +2,7 @@ function lovr.load()
   lovr.graphics.setBackground(0x400080)
 end
 
-function lovr.draw(batch)
+function lovr.draw(pass)
   local vertices = {
     {   0,  .3, 0 ; 1, 0, 0, 1 },
     {  .4, -.3, 0 ; 0, 1, 0, 1 },
@@ -21,6 +21,6 @@ function lovr.draw(batch)
     local a = 10
     local x = math.sin(t)
     local y = math.cos(t)
-    batch:mesh(buffer, 0, 1.7 + x, -1 + y)
+    pass:mesh(buffer, 0, 1.7 + x, -1 + y)
   end
 end
