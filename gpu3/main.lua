@@ -1,5 +1,5 @@
 function lovr.load()
-  lovr.graphics.setBackgroundColor(0x400080)
+  lovr.graphics.setBackground(0x400080)
 end
 
 function lovr.draw(batch)
@@ -10,8 +10,8 @@ function lovr.draw(batch)
   }
 
   local format = {
-    { 'position', 'vec3' },
-    { 'color', 'vec4' }
+    { name='VertexPosition', type='vec3' },
+    { name='VertexColor', type='vec4' }
   }
 
   local buffer = lovr.graphics.getBuffer(vertices, format)
